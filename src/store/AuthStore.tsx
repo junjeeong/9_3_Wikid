@@ -3,7 +3,11 @@ import { persist } from "zustand/middleware";
 import { postSignIn } from "@/api/auth";
 
 interface AuthStore {
-  user: { id: number; name: string; email: string } | null;
+  user: {
+    id: number;
+    name: string;
+    email: string;
+  } | null;
   accessToken: string | null;
   refreshToken: string | null;
   isLoggedIn: boolean;
